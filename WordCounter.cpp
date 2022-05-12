@@ -6,17 +6,23 @@
 
 using namespace std;
 
-string PATH = "C:/Users/itpet/Documents/CPP Qt/CPP/Ostalo/WordCounter/text.txt";
+string PATH = "../WordCounter/text.txt";
 
 int main()
 {
-    Word word;
+	Word word;
 
-    cout << word.read_file(PATH) << endl << endl;
+	cout << word.read_file(PATH) << endl << endl;
 
-    map<string, int> cw = word.count_words();
+	map<string, int> cw = word.count_words();
 
-    cout << word.format_output() << endl;
+	cout << word.format_output() << endl;
 
-    return EXIT_SUCCESS;
+	cout << endl << word.read_file(PATH) << endl << endl;
+
+	cw = word.count_words();
+
+	cout << word.format_output() << endl;
+
+	return EXIT_SUCCESS;
 }
